@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+    * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0px;
+      height: 100%;
+    }
+    /* a blue color as a generic focus style */
+    button:focus-visible {
+      outline: 2px solid #4a90e2 !important;
+      outline: -webkit-focus-ring-color auto 5px !important;
+    }
+    a {
+      text-decoration: none;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:700|Inter:400");
+    @font-face {
+      font-family: "Omnes Pro-Regular";
+      src: url("https://anima-uploads.s3.amazonaws.com/5c83b710011771000a0b2775/Omnes Pro Regular.otf")
+        format("opentype");
+    }
+
+    @font-face {
+      font-family: "Omnes Pro-Semibold";
+      src: url("https://anima-uploads.s3.amazonaws.com/5c83b710011771000a0b2775/Omnes Pro Semibold.otf")
+        format("opentype");
+    }
+
+    @font-face {
+      font-family: "Omnes Pro-Medium";
+      src: url("https://anima-uploads.s3.amazonaws.com/5c83b710011771000a0b2775/Omnes Pro Medium.otf")
+        format("opentype");
+    }
+
+    @font-face {
+      font-family: "Myriad Pro-Regular";
+      src: url("https://anima-uploads.s3.amazonaws.com/5b530adf29760f00097e1a6e/Myriad-Pro_31655.ttf")
+        format("truetype");
+    }
+
+    .emailmkt-funil {
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .emailmkt-funil .div {
+      overflow: hidden;
+      width: 1101px;
+      height: 2394px;
+      position: relative;
+    }
+
+    .emailmkt-funil .overlap {
+      width: 1101px;
+      height: 736px;
+      top: 0;
+      background-image: url('https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/vector.svg');
+      background-size: 100% 100%;
+      position: absolute;
+      left: 0;
+    }
+
+    .emailmkt-funil .clip-path-group {
+      position: absolute;
+      width: 742px;
+      height: 625px;
+      top: 30px;
+      left: 359px;
+    }
+
+    .emailmkt-funil .rectangle {
+      position: absolute;
+      width: 664px;
+      height: 563px;
+      top: 90px;
+      left: 437px;
+    }
+
+    .emailmkt-funil .vector {
+      position: absolute;
+      width: 1100px;
+      height: 345px;
+      top: 323px;
+      left: 1px;
+    }
+
+    .emailmkt-funil .group {
+      position: absolute;
+      width: 519px;
+      height: 225px;
+      top: 76px;
+      left: 58px;
+    }
+
+    .emailmkt-funil .text-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 42px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .p {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      font-family: "Omnes Pro-Semibold", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 42px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-2 {
+      position: absolute;
+      top: 90px;
+      left: 0;
+      font-family: "Omnes Pro-Semibold", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 42px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-3 {
+      position: absolute;
+      top: 135px;
+      left: 0;
+      font-family: "Omnes Pro-Semibold", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 42px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-4 {
+      position: absolute;
+      top: 180px;
+      left: 0;
+      font-family: "Omnes Pro-Semibold", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 42px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .group-2 {
+      position: absolute;
+      width: 392px;
+      height: 213px;
+      top: 373px;
+      left: 58px;
+    }
+
+    .emailmkt-funil .div-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 31px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .overlap-group {
+      width: 372px;
+      height: 70px;
+      top: 36px;
+      position: absolute;
+      left: 0;
+    }
+
+    .emailmkt-funil .span {
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 31px;
+      letter-spacing: 0;
+    }
+
+    .emailmkt-funil .text-wrapper-5 {
+      font-size: 34px;
+    }
+
+    .emailmkt-funil .vida-escolha-as {
+      position: absolute;
+      top: 33px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 34px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-6 {
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 34px;
+      letter-spacing: 0;
+    }
+
+    .emailmkt-funil .text-wrapper-7 {
+      font-size: 31px;
+    }
+
+    .emailmkt-funil .text-wrapper-8 {
+      position: absolute;
+      top: 108px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 31px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-9 {
+      position: absolute;
+      top: 144px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 31px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-10 {
+      position: absolute;
+      top: 180px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 31px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .overlap-2 {
+      width: 1101px;
+      height: 1658px;
+      top: 736px;
+      position: absolute;
+      left: 0;
+    }
+
+    .emailmkt-funil .img {
+      position: absolute;
+      width: 1101px;
+      height: 1190px;
+      top: 0;
+      left: 0;
+    }
+
+    .emailmkt-funil .group-3 {
+      position: absolute;
+      width: 634px;
+      height: 108px;
+      top: 789px;
+      left: 228px;
+      opacity: 0.42;
+      background-image: url('https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/rectangle.png');
+      background-size: 100% 100%;
+    }
+
+    .emailmkt-funil .vector-2 {
+      position: absolute;
+      width: 630px;
+      height: 97px;
+      top: 742px;
+      left: 230px;
+    }
+
+    .emailmkt-funil .text-wrapper-11 {
+      position: absolute;
+      top: 771px;
+      left: 255px;
+      font-family: "Noto Sans", Helvetica;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 28px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .emailmkt-funil .clip-path-group-2 {
+      position: absolute;
+      width: 1101px;
+      height: 310px;
+      top: 883px;
+      left: 0;
+    }
+
+    .emailmkt-funil .vector-3 {
+      position: absolute;
+      width: 1101px;
+      height: 469px;
+      top: 1189px;
+      left: 0;
+    }
+
+    .emailmkt-funil .vector-4 {
+      position: absolute;
+      width: 918px;
+      height: 199px;
+      top: 92px;
+      left: 86px;
+    }
+
+    .emailmkt-funil .group-4 {
+      position: absolute;
+      width: 759px;
+      height: 75px;
+      top: 149px;
+      left: 154px;
+    }
+
+    .emailmkt-funil .text-wrapper-12 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 33px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-13 {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 33px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .group-5 {
+      position: absolute;
+      width: 767px;
+      height: 312px;
+      top: 366px;
+      left: 166px;
+    }
+
+    .emailmkt-funil .text-wrapper-14 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Omnes Pro-Semibold", Helvetica;
+      font-weight: 400;
+      color: #fe0072;
+      font-size: 45px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-15 {
+      position: absolute;
+      top: 53px;
+      left: 0;
+      font-family: "Omnes Pro-Semibold", Helvetica;
+      font-weight: 400;
+      color: #fe0072;
+      font-size: 45px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-16 {
+      position: absolute;
+      top: 106px;
+      left: 0;
+      font-family: "Omnes Pro-Semibold", Helvetica;
+      font-weight: 400;
+      color: #fe0072;
+      font-size: 45px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-17 {
+      position: absolute;
+      top: 212px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #fe0072;
+      font-size: 45px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-18 {
+      position: absolute;
+      top: 285px;
+      left: 114px;
+      font-family: "Omnes Pro-Semibold", Helvetica;
+      font-weight: 400;
+      color: #fe0072;
+      font-size: 25px;
+      letter-spacing: 0;
+      line-height: normal;
+      text-decoration: underline;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .vector-5 {
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      top: 35px;
+      left: 902px;
+    }
+
+    .emailmkt-funil .rectangle-2 {
+      position: absolute;
+      width: 82px;
+      height: 82px;
+      top: 58px;
+      left: 927px;
+    }
+
+    .emailmkt-funil .group-6 {
+      position: absolute;
+      width: 594px;
+      height: 55px;
+      top: 1233px;
+      left: 259px;
+    }
+
+    .emailmkt-funil .text-wrapper-19 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 24px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-20 {
+      position: absolute;
+      top: 29px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 24px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-21 {
+      position: absolute;
+      top: 1405px;
+      left: 259px;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 13px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .group-7 {
+      position: absolute;
+      width: 582px;
+      height: 82px;
+      top: 1315px;
+      left: 258px;
+    }
+
+    .emailmkt-funil .text-wrapper-22 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-23 {
+      position: absolute;
+      top: 17px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .conosco-por-meio-do {
+      position: absolute;
+      top: 34px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-24 {
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    .emailmkt-funil .text-wrapper-25 {
+      font-family: "Omnes Pro-Medium", Helvetica;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .emailmkt-funil .text-wrapper-26 {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .questionamento-pelo {
+      position: absolute;
+      top: 67px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-27 {
+      text-decoration: underline;
+    }
+
+    .emailmkt-funil .group-8 {
+      position: absolute;
+      width: 313px;
+      height: 30px;
+      top: 1569px;
+      left: 393px;
+    }
+
+    .emailmkt-funil .caso-n-o-queira-mais {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 13.1px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .text-wrapper-28 {
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 13.1px;
+      letter-spacing: 0;
+    }
+
+    .emailmkt-funil .caso-queira-acessar {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      font-family: "Omnes Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffe9ee;
+      font-size: 13.1px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .rectangle-3 {
+      position: absolute;
+      width: 131px;
+      height: 54px;
+      top: 1472px;
+      left: 390px;
+    }
+
+    .emailmkt-funil .rectangle-4 {
+      position: absolute;
+      width: 110px;
+      height: 54px;
+      top: 1471px;
+      left: 602px;
+    }
+
+    .emailmkt-funil .text-wrapper-29 {
+      position: absolute;
+      top: 193px;
+      left: 618px;
+      font-family: "Inter", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .emailmkt-funil .vector-6 {
+      position: absolute;
+      width: 317px;
+      height: 77px;
+      top: 1112px;
+      left: 771px;
+    }
+
+    .emailmkt-funil .autocuidado-e {
+      position: absolute;
+      top: 1126px;
+      left: 800px;
+      font-family: "Myriad Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 11px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .emailmkt-funil .text-wrapper-30 {
+      position: absolute;
+      top: 1126px;
+      left: 782px;
+      font-family: "Myriad Pro-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 11px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
+
+    .emailmkt-funil .clip-path-group-3 {
+      position: absolute;
+      width: 769px;
+      height: 625px;
+      top: 837px;
+      left: -1954px;
+    }
+  </style>
+
+  <body>
+    <div class="emailmkt-funil">
+      <div class="div">
+        <div class="overlap">
+          <img class="clip-path-group" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/clip-path-group-1.png" />
+          <img class="rectangle" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/rectangle-1.png" />
+          <img class="vector" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/vector-6.svg" />
+          <div class="group">
+            <p class="text-wrapper">Descubra o poder das cores:</p>
+            <p class="p">Torne-se a artista da sua</p>
+            <p class="text-wrapper-2">própria beleza e apoie a</p>
+            <p class="text-wrapper-3">causa contra o câncer de</p>
+            <div class="text-wrapper-4">mama!</div>
+          </div>
+          <div class="group-2">
+            <p class="div-2">O Coletivo Pink preparou o</p>
+            <div class="overlap-group">
+              <p class="div-2">
+                <span class="span">guia </span>
+                <span class="text-wrapper-5">Mais Cor Para sua </span>
+              </p>
+              <p class="vida-escolha-as">
+                <span class="text-wrapper-6">Vida</span>
+                <span class="text-wrapper-7">. Escolha as cores que </span>
+              </p>
+            </div>
+            <p class="text-wrapper-8">combinam com seu tom de</p>
+            <p class="text-wrapper-9">pele, estilo pessoal e sinta-se</p>
+            <div class="text-wrapper-10">linda.</div>
+          </div>
+        </div>
+        <div class="overlap-2">
+          <img class="img" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/vector-1.svg" />
+          <div class="group-3"></div>
+          <img class="vector-2" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/vector-2.svg" />
+          <p class="text-wrapper-11">CLIQUE AQUI PARA ACESSAR O SEU GUIA</p>
+          <img class="clip-path-group-2" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/clip-path-group.png" />
+          <img class="vector-3" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/vector-3.svg" />
+          <img class="vector-4" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/vector-4.svg" />
+          <div class="group-4">
+            <p class="text-wrapper-12">
+              Autocuidado melhora a sua qualidade de vida e saúde,
+            </p>
+            <p class="text-wrapper-13">aproveite o conteúdo e cuide-se!</p>
+          </div>
+          <div class="group-5">
+            <p class="text-wrapper-14">Conhecimento e prevenção para o</p>
+            <p class="text-wrapper-15">enfrentamento ao câncer de mama é</p>
+            <div class="text-wrapper-16">assunto sério.</div>
+            <p class="text-wrapper-17">
+              Os seus exames de rotina estão em dia?
+            </p>
+            <p class="text-wrapper-18">
+              Clique aqui e saiba mais sobre o Câncer de Mama.
+            </p>
+          </div>
+          <img class="vector-5" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/vector-5.svg" />
+          <img class="rectangle-2" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/rectangle-2.png" />
+          <div class="group-6">
+            <p class="text-wrapper-19">
+              Este manual é resultado de uma parceria inédita entre o
+            </p>
+            <p class="text-wrapper-20">
+              Coletivo Pink e a estrategista de imagem Suellen Sartorato.
+            </p>
+          </div>
+          <div class="text-wrapper-21">PP-UNP-BRA-3072 - Setembro/2023</div>
+          <div class="group-7">
+            <p class="text-wrapper-22">
+              E-mail enviado pelo Grupo Pfizer. Proibida a reprodução ou
+              compartilhamento com terceiros. A
+            </p>
+            <p class="text-wrapper-23">
+              Pfizer respeita sua privacidade. Caso você não queira mais receber
+              mensagens, entre em contato
+            </p>
+            <p class="conosco-por-meio-do">
+              <span class="text-wrapper-24">conosco por meio do e-mail </span>
+              <span class="text-wrapper-25">privacidade@pfizer.com</span>
+              <span class="text-wrapper-24"
+                >. Para mais informações sobre as nossas
+              </span>
+            </p>
+            <p class="text-wrapper-26">
+              práticas de privacidade, clique aqui. Caso queira entrar em
+              contato conosco, envie seu
+            </p>
+            <p class="questionamento-pelo">
+              <span class="text-wrapper-24"
+                >questionamento pelo formulário ou fale com a nossa assistente
+                virtual Fabi,
+              </span>
+              <span class="text-wrapper-25">acesse aqui</span>
+              <span class="text-wrapper-27">.</span>
+            </p>
+          </div>
+          <div class="group-8">
+            <p class="caso-n-o-queira-mais">
+              <span class="text-wrapper-28"
+                >Caso não queira mais receber estes e-mails,</span
+              >
+              <span class="text-wrapper-25">clique aqui</span>
+              <span class="text-wrapper-27">.</span>
+            </p>
+            <p class="caso-queira-acessar">
+              <span class="text-wrapper-28"
+                >Caso queira acessar os Direitos do Titular,
+              </span>
+              <span class="text-wrapper-25">clique aqui</span>
+              <span class="text-wrapper-27">.</span>
+            </p>
+          </div>
+          <img class="rectangle-3" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/rectangle-3.png" />
+          <img class="rectangle-4" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/rectangle-4.png" />
+          <div class="text-wrapper-29">1</div>
+          <img class="vector-6" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/vector-7.svg" />
+          <p class="autocuidado-e">
+            Autocuidado e qualidade de vida. Acesso em: Set/23. <br />Disponível
+            em: https://prodi.ifes.edu.br/images/stories/Auto-<br />cuidado_e_Qualidade_de_Vida.pdf.
+          </p>
+          <div class="text-wrapper-30">1.</div>
+        </div>
+        <img class="clip-path-group-3" src="https://coletivo-pink-storage.s3.sa-east-1.amazonaws.com/EmailMkt2/clip-path-group-2.png" />
+      </div>
+    </div>
+  </body>
+</html>
